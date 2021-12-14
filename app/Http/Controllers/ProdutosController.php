@@ -75,7 +75,7 @@ class ProdutosController extends Controller
     public function show($id)
     {
         $produtos = Produto::find($id);
-        return view('produtos.show');
+        return view('produtos.show')->with('produto', $produtos);
     }
 
     /**
@@ -139,17 +139,17 @@ class ProdutosController extends Controller
         return view('produtos.excluidos')->with('produtos', $produtos);
         }
 
+        public function forceDestroy($id){
+            $produtos = Produto::onlyTrashed()->find($id);
+            $produtos->forceDelete();
+            return view('produtos.forceDestroy');
+        }
+
     public function restore($id){
         $produtos = Produto::onlyTrashed()->find($id);
         $produtos->restore();
-        return view('produtos.excluidos')->with('produtos', $produtos);
+        return view('produtos.restore');
        }
-
-    public function forceDestroy($id){
-        $produtos = Produto::onlyTrashed()->find($id);
-        $produtos->forceDelete();
-        return view('produtos.excluidos')->with('produtos', $produtos);
-    }
 
 
 }

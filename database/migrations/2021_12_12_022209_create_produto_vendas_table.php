@@ -13,7 +13,7 @@ class CreateProdutoVendasTable extends Migration
      */
     public function up()
     {
-        Schema::create('produto_vendas', function (Blueprint $table) {
+        Schema::create('produto_venda', function (Blueprint $table) {
             $table->foreignId('produto_id')->constrained();
             $table->foreignId('venda_id')->constrained();
             $table->timestamps();

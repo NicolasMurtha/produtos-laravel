@@ -16,12 +16,12 @@ class codSeeder extends Seeder
     {
         DB::table('cod')->insert([
             'numero' => 1,
-            'nome' => 'banana',
+            'nome' => 'biruleibe',
         ]);
 
         DB::table('cod')->insert([
             'numero' => 2,
-            'nome' => 'pistache',
+            'nome' => 'banana',
         ]);
 
         DB::table('cod')->insert([

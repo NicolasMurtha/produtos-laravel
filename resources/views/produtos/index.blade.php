@@ -64,6 +64,7 @@
             </form>
         </td>
         <td><a type="button" class="btn btn-warning btn-sm" href="{{route('produtos.edit', $elemento['id'])}}">Alterar</a></td>
+        <td><a type="button" class="btn btn-info btn-sm" href="{{route('produtos.show', $elemento['id'])}}">Informações</a></td>
     </tr>
 
     </tr>

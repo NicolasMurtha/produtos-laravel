@@ -14,12 +14,12 @@ class ProdutoVendaSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('produto_vendas')->insert([
+        DB::table('produto_venda')->insert([
             'produto_id' => 1,
             'venda_id' => 1,
         ]);
 
-        DB::table('produto_vendas')->insert([
+        DB::table('produto_venda')->insert([
             'produto_id' => 1,
             'venda_id' => 2,
         ]);

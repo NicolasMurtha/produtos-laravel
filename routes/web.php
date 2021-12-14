@@ -24,7 +24,7 @@ Route::resource('/setores', SetorsController::class);
 
 Route::get('/excluidos', [ProdutosController::class, 'showDestroyed'])->name("produtos.excluidos");
 
-Route::post('forceDestroy', [ProdutosController::class, 'forceDestroy'])->name('produtos.forceDestroy');
+Route::post('forceDestroy/{id}', [ProdutosController::class, 'forceDestroy'])->name('produtos.forceDestroy');
 
 Route::get('restore/{id}', [ProdutosController::class, 'restore'])->name('produtos.restore');
 
